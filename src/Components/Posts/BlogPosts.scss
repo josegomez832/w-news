@@ -1,0 +1,9 @@
+@import './../../variables.scss';
+.blog-post{
+    display: flex;
+    flex-wrap:wrap;
+    align-items: center;
+    .blog-post--image{
+        margin-right:1.5rem;
+    }
+}

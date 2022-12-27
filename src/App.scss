@@ -1,0 +1,37 @@
+@import './variables.scss';
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@200;400;700;800&display=swap');
+body{
+  background: $body-bg;
+  font-family: 'Inter', sans-serif;
+}
+* {
+  margin: 0;
+  padding: 0;
+}
+@media(min-width:991px){
+  .container{
+    max-width:1110px;
+    margin:0 auto;
+  }
+  .featured-post img {
+    height: 300px;
+    object-fit: cover;
+}
+  .blog-wrapper{
+    display: flex;
+    flex-wrap: wrap;
+    .featured-post{
+      max-width: 68%;
+      flex: 0 0 68%;
+    }
+    .sidebar{
+      max-width: 32%;
+      flex: 0 0 32%;
+    }
+    .blog-feed{
+      max-width: 100%;
+      flex: 0 0 100%;
+      display:flex;
+    }
+  }
+}

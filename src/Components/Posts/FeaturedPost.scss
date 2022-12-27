@@ -1,0 +1,50 @@
+@import './../../variables.scss';
+.featured-post{
+    .main-heading{
+        font-size: 3.5rem;
+        font-weight: 800;
+        color: $dark-space-blue;
+        line-height: 3.25rem;
+    }
+    img{
+        width: 100%;
+        display:block;
+    }
+    .btn{
+        
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        text-decoration: none;
+        transition:0.2s;
+        padding: 12px 0px;
+        display: block;
+        max-width:185px;
+        text-align: center;
+    }
+    .btn-primary{
+        background: $light-vermillion;
+        color:#fff;
+        margin-top:20px;
+        &:hover{
+            background: $dark-space-blue;
+            transition:0.2s;
+        }
+    }
+}
+@media (min-width: 767px){
+    .featured-post--inner{
+        padding-right:35px;
+    }
+    .featured-post--content{
+        display: flex;
+        flex-wrap:wrap;
+        align-items: center;
+        justify-content: space-between;
+        padding: 25px 0px;
+    }
+}
+@media(min-width:991px){
+    .featured-post--content div {
+        width: 50%;
+    }
+}
