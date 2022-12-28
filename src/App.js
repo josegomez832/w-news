@@ -28,11 +28,11 @@ function App({blog}) {
 
   useEffect(() => {
     window
-      .fetch(`https://graphql.contentful.com/content/v1/spaces/puhljbd7ljjc`, {
+      .fetch(`https://graphql.contentful.com/content/v1/spaces/${process.env.REACT_APP_ID}`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
-          Authorization: `Bearer mLYPLCimOPa4NpJKODcj06uv6oh3fiBwjUEp-INILtc`,
+          Authorization: `Bearer ${process.env.REACT_APP_KEY}`,
         },
         body: JSON.stringify({ query }),
       })
@@ -45,6 +45,7 @@ function App({blog}) {
         setPage(data.blogCollection);
       });
   }, []);
+  console.log();
   if (!page) {
     return "Loading...";
   }
