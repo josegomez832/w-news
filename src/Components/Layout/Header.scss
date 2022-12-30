@@ -1,0 +1,70 @@
+@import './../../variables.scss';
+
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 45px 0px;
+    .nav{
+        list-style: none;
+        
+        li{
+            padding:0px 10px;
+            a{
+                color:$gunmetal;
+                text-decoration:none;
+                transition:0.2s;
+                &:hover{
+                    color:$light-vermillion;
+                    transition:0.2s;
+                }
+            }
+        }
+        
+    }
+}
+@media(min-width:991px){
+    .navigation{
+        .nav{
+            display:flex;
+        }
+        
+    }
+    .hamburger-menu, .mobile{
+        display: none;
+    }
+}
+@media(max-width:991px){
+    .navigation{
+        opacity:0;
+           position:absolute;
+           max-width:350px;
+           right:-350px;
+           height:100%;
+           top:0;
+           bottom:0;
+           background:#fff;
+           width:100%;
+        .nav{
+           
+           li{
+            margin-bottom:24px;
+            a{
+                font-size:18px;
+                display: block;
+                width: 100%;
+                padding-left:30px;
+            }
+           }
+        }
+        
+    }
+    .open{
+        opacity:1;
+        right:0;
+    }
+    .hamburger-menu, .mobile{
+        display: block;
+        cursor: pointer;
+    }
+}

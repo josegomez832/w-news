@@ -16,8 +16,8 @@ function BlogPosts({post}) {
               </div>
               <div className="blog-post--content">
               <div className="blog-post--counter">0{index-1}</div>
-                <h2>{blogPost.blogTitle}</h2>
-                <p>{blogPost.excerpt}</p>
+                <p className="blog-post--title-sm"><a href="#">{blogPost.blogTitle}</a></p>
+                <p className='blog-post--excerpt'>{blogPost.excerpt}</p>
               </div>
             </div>
         ):null

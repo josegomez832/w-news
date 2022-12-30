@@ -8,9 +8,13 @@ body{
   margin: 0;
   padding: 0;
 }
+.container{
+  padding:0px 15px;
+  margin:0 auto;
+}
 @media(min-width:991px){
   .container{
-    max-width:1110px;
+    max-width:100%;
     margin:0 auto;
   }
   .featured-post img {
@@ -32,6 +36,13 @@ body{
       max-width: 100%;
       flex: 0 0 100%;
       display:flex;
+      justify-content: space-around;
+      
     }
+  }
+}
+@media(min-width:1200px){
+  .container{
+    max-width:1110px;
   }
 }
