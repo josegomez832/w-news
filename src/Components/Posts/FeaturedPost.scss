@@ -63,4 +63,10 @@
     .main-heading, .featured-post{
         margin-bottom:25px;
     }
+    .featured-post{
+        .main-heading{
+            line-height:4rem;
+        }
+    }
+    
 }

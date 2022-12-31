@@ -15,6 +15,14 @@ export default function FeaturedPost({post}) {
                 alt="Blog imagee"
                 width={featuredPost.featuredImage.width}
                 height={featuredPost.featuredImage.height}
+                className="img-desktop"
+              />
+              <img
+                src={featuredPost.mobileFeaturedImage.url}
+                alt="Mobile Blog image"
+                width={featuredPost.mobileFeaturedImage.width}
+                height={featuredPost.mobileFeaturedImage.height}
+                className="img-mobile"
               />
             </div>
             <div className="featured-post--content">

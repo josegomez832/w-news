@@ -15,7 +15,7 @@ function BlogPosts({post}) {
                 <img src={blogPost.featuredImage.url} alt={blogPost.blogTitle} width={blogPost.featuredImage.width} height={blogPost.featuredImage.height} />
               </div>
               <div className="blog-post--content">
-              <div className="blog-post--counter">0{index-1}</div>
+              <div className="blog-post--counter">0{index}</div>
                 <p className="blog-post--title-sm"><a href="#">{blogPost.blogTitle}</a></p>
                 <p className='blog-post--excerpt'>{blogPost.excerpt}</p>
               </div>

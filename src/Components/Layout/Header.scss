@@ -35,36 +35,65 @@
     }
 }
 @media(max-width:991px){
+    .overlay{
+        overflow:hidden;
+    }
+    .overlay::before{
+        content: '';
+        width: 100%;
+        height: 100vh;
+        background: rgba(0,0,0,0.7);
+        position: absolute;
+        left: 0;
+        right: 0;
+        overflow: hidden;
+    }
     .navigation{
         opacity:0;
            position:absolute;
            max-width:350px;
-           right:-350px;
-           height:100%;
+           height:0;
+           overflow: hidden;
            top:0;
            bottom:0;
            background:#fff;
            width:100%;
+           right:-100%;
+           visibility: hidden;
+            transition: all .35s ease-in-out;
+            transform: translateX(100%);
         .nav{
            
            li{
-            margin-bottom:24px;
+            margin-bottom:32px;
             a{
                 font-size:18px;
                 display: block;
                 width: 100%;
                 padding-left:30px;
+                color:$dark-space-blue;
             }
            }
         }
         
     }
     .open{
-        opacity:1;
-        right:0;
+        opacity: 1;
+    visibility: visible;
+    transform: translateX(0%);
+    right:0;
+    height:auto;
     }
     .hamburger-menu, .mobile{
         display: block;
         cursor: pointer;
+    }
+    .mobile{
+ 
+            display: flex;
+            justify-content: end;
+            padding: 30px;
+            margin-bottom: 25px;
+        
     }
 }

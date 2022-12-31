@@ -15,6 +15,11 @@ const query = `{
        width
        height
      }
+     mobileFeaturedImage{
+      url
+      width
+      height
+     }
      featured
      sys{
        id
@@ -45,7 +50,7 @@ function App({blog}) {
         setPage(data.blogCollection);
       });
   }, []);
-  console.log();
+  console.log(page);
   if (!page) {
     return "Loading...";
   }
